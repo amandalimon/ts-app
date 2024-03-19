@@ -1,11 +1,17 @@
 import { BaseModel } from "../base.model";
 import { Category } from "../categories/category.model";
 
-export type Sizes = 'S' | 'M' | 'L ' | 'XL';
+export type Sizes = 'S' | 'M' | 'L' | 'XL';
 
 export interface Product extends BaseModel {
-  title: string,
-  stock: number,
-  category: Category,
-  size?: Sizes,
+  title: string;
+  image: string;
+  description: string;
+  stock: number;
+  size?: Sizes;
+  color: string;
+  price: number;
+  category: Category;
+  isNew: boolean;
+  tags: string[];
 };
