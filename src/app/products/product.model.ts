@@ -1,11 +1,10 @@
+import { BaseModel } from "../base.model";
 import { Category } from "../categories/category.model";
 
 export type Sizes = 'S' | 'M' | 'L ' | 'XL';
 
-export interface Product {
-  id: userId,
+export interface Product extends BaseModel {
   title: string,
-  createdAt: Date,
   stock: number,
   category: Category,
   size?: Sizes,
