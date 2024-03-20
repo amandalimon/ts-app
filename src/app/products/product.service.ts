@@ -22,7 +22,9 @@ export const addProduct = (data: CreateProductDTO) => {
   return newProduct;
 }
 
-export const updateProduct = (id: string, changes: UpdateProductDTO): Product => {
+export const updateProduct = (
+  // id: Product['id'] para obtener el tipado de Product en el parámetro 'id'
+  id: string, changes: UpdateProductDTO): Product => {
   const index = products.findIndex(item => item.id === id);
   const prevData = products[index];
   products[index] = {
