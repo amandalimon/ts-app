@@ -4,4 +4,8 @@ export interface CreateProductDTO extends Omit<Product, 'id' | 'createdAt' | 'up
   categoryId: string;
 } // En el momento de creación no se necesita el objeto category pero sí el id, entonces creamos este nuevo objeto a partir de Product y lo extendemos con un campo más:
 
-type example = Pick<Product, 'color' | 'description'>
+type example1 = Pick<Product, 'color' | 'description'>
+
+export interface UpdateProductDTO extends Partial<CreateProductDTO> {}
+
+type example2 = Required<Product>
