@@ -9,3 +9,6 @@ type example1 = Pick<Product, 'color' | 'description'>
 export interface UpdateProductDTO extends Partial<CreateProductDTO> {}
 
 type example2 = Required<Product>
+
+export interface FindProduct extends Readonly<Partial<Product>> {}
+// Permitir campos opcionales que sean sólo de lectura
